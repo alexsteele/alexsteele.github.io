@@ -7,15 +7,17 @@ date:   2022-02-22 00:00:00 -0800
 
 _How will computers represent knowledge in the future? I speculate._
 
+_Update: Reading more on connectionism changed my mind on a lot of this. I think improved knowledge sharing between models is interesting, but I don't know if dense vector representations are the way to do it. Reading: [Distributed Representations](http://stanford.edu/~jlmcc/papers/PDP/Chapter3.pdf) by Hinton, McClelland, and Rumelhart_
+
 One thing that intrigues me about today’s ML models is that most of their knowledge is internal. It’s stored as weights within the model. These weights are typically represented as matrices of numbers, all carefully laid out according to the model architecture.
 
-But imaging more intelligent systems of the future, my guess is that this will change. A lot of knowledge will move outside the model. And not just simple, discrete facts. High dimensional, mushier data that we might call concepts[^1]. Reasoning tasks will still be performed by big models with specialized knowledge. But these general concept representations will be an important input.
+But imaging more intelligent systems of the future, my guess is that this will change. A lot of knowledge will move outside the model. And not just simple, discrete facts. High dimensional, mushier data. Concepts [^1]. Reasoning tasks will still be performed by big models with specialized knowledge. But these general concept representations will be an important input.
 
 This would have some obvious advantages. Models could share what they learn, instead of each having distinct representations. They also won’t need to be as big[^2], since they can only fetch the knowledge they need when they need it.
 
 What will these concepts look like? It seems like a fairly sure bet that high dimensional vectors will be an important representation. Something like the word or document embeddings we have today. But my intuition is that this won’t be enough. You might be able to capture a compressed representation of Hamlet in a document vector. But can you capture the conceptual model that created Hamlet with a set of vectors in a vector space?
 
-Maybe. The hard part is not just the individual facts, but how they’re all related. And concepts exist at many different levels, related to each other in many different ways. Indeed, humans seem able to refine, relate, combine, and divide concepts ad infinitum. So I’m somewhat skeptical that a single vector space model could capture concepts in these ways.
+Maybe. The hard part is not just the individual facts, but how they’re all related. And concepts exist at many different levels, related to each other in many different ways. Humans seem able to refine, relate, combine, and divide concepts ad infinitum. So I’m somewhat skeptical that a single vector space model could capture concepts in these ways.
 
 My guess is we'll need some sort of explicit knowledge graph to capture useful relations between concepts. But where traditional knowledge graphs are built around discrete facts, future concept graphs will be built on learned ideas.
 
