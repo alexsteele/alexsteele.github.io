@@ -34,21 +34,21 @@ spot a bunch of other systems that do too. I particularly like
 HashiCorp's implementation in Go, which looks really clean and easy
 to work with.
 
-Another obvious reason: Apache ZooKeeper. ZooKeeper is based on
-Google's Chubby and provides a nice directory-based model for
-consensus. Everyone and their dog uses it, or so it seems. It's
-used in most commercial distributed systems I've had
-the fortune to study over the past few years. But interestingly,
-ZooKeeper uses neither paxos nor raft. It has its own implementation
-of atomic broadcast based on its specific needs for high throughput
-messaging. The
+And finally: Apache ZooKeeper. ZooKeeper is a coordination service
+based on Google's Chubby. It provides a nice directory-based model for
+consensus. Everyone and their dog uses it, or so it seems. It's used
+in most commercial distributed systems I've studied over the past few
+years. But interestingly, ZooKeeper uses neither paxos nor raft. It
+has its own implementation of atomic broadcast based on its specific
+needs for high throughput messaging. The
 [docs](https://zookeeper.apache.org/doc/r3.4.13/zookeeperInternals.html#sc_atomicBroadcast)
-are fairly minimal but still interesting. And the implementaiton
-is nestled inside the zookeeper server
+are fairly minimal but still interesting. And the implementaiton is
+nestled inside the zookeeper server
 [package](https://github.com/apache/zookeeper/tree/master/zookeeper-server/src/main/java/org/apache/zookeeper/server/quorum).
 Given its wide usage in big open source projects, including systems
 like elasticsearch and (older) versions of kafka, I wouldn't be
 surprised if virtually every tech company that runs distributed
 systems depends on ZooKeeper somewhere in the stack. Talk about reach.
-And it looks like only a small handful of contributors built out the core pieces.
-Brings to mind the classic [xkcd](https://xkcd.com/2347/).
+And it looks like only a small handful of contributors built out the
+core pieces.  Brings to mind the classic
+[xkcd](https://xkcd.com/2347/).
