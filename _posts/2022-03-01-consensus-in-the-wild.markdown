@@ -16,14 +16,14 @@ except maybe [phxpaxos](https://github.com/Tencent/phxpaxos) by
 tencent.
 
 Considering all the interest, I was a little surprised by this. But I
-guess it makes sense. Not many systems directly use
-consensus primitives. And even if they did, how many paxos
-implementations do we need anyways? Even fewer. There are
-probably just a small handful of solid, well-tested implementations in
-the biggest commercial systems.  We know Google has one, or used to
-for the Chubby lock system. I'm sure Amazon has or had one, and
-Microsoft probably built its own at some point over the years too.
-Maybe a few other tech giants.
+guess it makes sense. Not many systems directly use consensus
+primitives. And even if they did, how many paxos implementations do we
+need anyways? Even fewer. There are probably just a small handful of
+solid, well-tested implementations in the biggest commercial systems.
+We know Google [^1] has one, or used to for the Chubby lock
+system. Microsoft has (at least) one [^2]. And I'm sure Amazon has or
+had one, though I can't find a quick reference online. Maybe a few
+other tech giants.
 
 Another reason: Raft. [Raft](https://raft.github.io/) is a
 consensus algorithm that aims to be easier to understand and implement
@@ -52,3 +52,7 @@ systems depends on ZooKeeper somewhere in the stack. Talk about reach.
 And it looks like only a small handful of contributors built out the
 core pieces.  Brings to mind the classic
 [xkcd](https://xkcd.com/2347/).
+
+[^1] [The Chubby lock service for loosely-coupled distributed systems](https://static.googleusercontent.com/media/research.google.com/en//archive/chubby-osdi06.pdf), Mike Burrows, Google, 2006
+
+[^2] [Autopilot: Automatic Data Center Management](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/osr2007.pdf), Michael Isard, Microsoft Research, 2007
