@@ -9,7 +9,7 @@ How do we get AI systems that learn continuously in their environment? My brief 
 
 Current LLMs do not learn. Weights are not updated after training. They learn only from context (inputs). Everything that the LLM needs to know, we pass to it in the prompt. Chain-of-thought builds on this by having the LLM iterate on its own output until it converges on good answer.
 
-Continuous training causes **catastrophic forgetting**, the loss of what a model already learned. Performance improves on new tasks and declines on old tasks. This is a challenging problem to solve for dense parametric models, since all the knowledge is mushed together in the waits and training typically updates all the weights.
+Continuous training causes **catastrophic forgetting**, the loss of what a model already learned. Performance improves on new tasks and declines on old tasks. This is a challenging problem to solve for dense parametric models, since all the knowledge is mushed together in the weights and training updates weights.
 
 Solutions include: 
 1) Regularization - elastic weight consolidation (EWC), identify important weights and penalize changes
