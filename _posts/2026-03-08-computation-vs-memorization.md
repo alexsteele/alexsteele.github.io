@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Memory v Compute"
+title:  "LLM Memory v Compute"
 permalink: /:title/
 date:   2026-03-08 00:00:00 -0800
 ---
